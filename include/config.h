@@ -1,0 +1,4 @@
+
+
+int GetWindowWidth();
+int GetWindowHeight();
