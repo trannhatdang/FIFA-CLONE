@@ -1,7 +1,7 @@
 #ifndef G_OBJECT_
 #define G_OBJECT_
 
-#include "engine/dg_engine_stdc++.h"
+#include "engine/dg_engine_std.h"
 #include "component.h"
 
 class GameObject

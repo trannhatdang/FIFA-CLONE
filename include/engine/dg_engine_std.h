@@ -1,5 +1,5 @@
-#ifndef DG_ENGINE_STDC++_
-#define DG_ENGINE_STDC++_
+#ifndef DG_ENGINE_STD_
+#define DG_ENGINE_STD_
 
 #include <vector>
 #include <memory>
