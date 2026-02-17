@@ -7,8 +7,12 @@
 class GameObject
 {
 	private:
-		std::vector<Component*> _commponents;
-	
+		std::vector<std::unique_ptr<Component>> _commponents;
+	public:
+		GameObject();
+		void OnIterate();
+		void OnDraw();
+		void OnEvent();
 };
 
 #endif

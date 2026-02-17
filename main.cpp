@@ -3,15 +3,15 @@
 #include <SDL3/SDL_main.h>
 #include <iostream>
 #include <vector>
-#include "scene.h"
+#include "intro_scene.h"
+#include "game_scene.h"
+#include "options_scene.h"
+#include "menu_scene.h"
 #include "config.h"
 
 static SDL_Renderer* renderer = nullptr;
 static SDL_Window* window = nullptr;
-static std::vector<std::unique_ptr<Scene>> scenes;
-
-
-
+static std::unique_ptr<Scene>* scenes[10];
 
 SDL_AppResult SDL_AppInit(void **appstate, int argc, char** argv)
 {
@@ -30,6 +30,13 @@ SDL_AppResult SDL_AppInit(void **appstate, int argc, char** argv)
 		fprintf(stderr, "SDL_CreateRenderer failed:%s", SDL_GetError());
 		return SDL_APP_FAILURE;
 	}
+
+	SDL_SetRenderLogicalPresentation(renderer, 1280, 720, SDL_LOGICAL_PRESENTATION_LETTERBOX);
+
+	scenes[0] = new IntroScene();
+	scenes[1] = new MenuScene();
+	scenes[2] = new OptionsScene();
+	scenes[3] = new GameScene();
 
 	return SDL_APP_CONTINUE;
 }
