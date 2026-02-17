@@ -9,12 +9,12 @@ class Scene
 	private:
 		std::vector<GameObject*> m_gameObjects;
 		std::string m_name;
+		void (*m_changeSceneCallback)(int);
 	public:
-		Scene();
-		Scene(const std::string& name, void (*changeSceneCallback)(int) = nullptr);
+		Scene(const std::string& name = "unnamed", void (*changeSceneCallback)(int) = nullptr);
 		void OnIterate();
 		void OnDraw();
-		void OnEvent();
+		void OnEvent(SDL_Event* event);
 };
 
 #endif

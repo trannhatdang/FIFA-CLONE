@@ -12,7 +12,7 @@ class GameObject
 		GameObject();
 		void OnIterate();
 		void OnDraw();
-		void OnEvent();
+		void OnEvent(SDL_Event* event);
 };
 
 #endif

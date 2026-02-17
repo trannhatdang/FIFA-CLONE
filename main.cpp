@@ -3,6 +3,8 @@
 #include <SDL3/SDL_main.h>
 #include <iostream>
 #include <vector>
+#include <memory>
+#include "engine/scene.h"
 #include "config.h"
 
 static SDL_Renderer* renderer = nullptr;

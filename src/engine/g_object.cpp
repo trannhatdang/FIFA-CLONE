@@ -10,7 +10,7 @@ void GameObject::OnDraw()
 
 }
 
-void GameObject::OnEvent()
+void GameObject::OnEvent(SDL_Event* event)
 {
 
 }
