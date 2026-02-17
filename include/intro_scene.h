@@ -10,6 +10,6 @@ class IntroScene : public Scene
 		void OnIterate();
 		void OnDraw();
 		void OnEvent();
-}
+};
 
 #endif
