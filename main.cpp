@@ -33,10 +33,10 @@ SDL_AppResult SDL_AppInit(void **appstate, int argc, char** argv)
 
 	SDL_SetRenderLogicalPresentation(renderer, 1280, 720, SDL_LOGICAL_PRESENTATION_LETTERBOX);
 
-	scenes[0] = new IntroScene();
-	scenes[1] = new MenuScene();
-	scenes[2] = new OptionsScene();
-	scenes[3] = new GameScene();
+	scenes[0] = new Scene("IntroScene");
+	scenes[1] = new Scene("MenuScene");
+	scenes[2] = new Scene("GameScene");
+	scenes[3] = new Scene("OptionsScene");
 
 	return SDL_APP_CONTINUE;
 }

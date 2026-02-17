@@ -3,7 +3,7 @@
 
 #include "engine/scene.h"
 
-class MenuScene : Scene
+class MenuScene : public Scene
 {
 
 }

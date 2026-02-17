@@ -6,14 +6,15 @@
 
 class Scene
 {
-	protected:
-		std::vector<GameObject*> _gameObjects;
+	private:
+		std::vector<GameObject*> m_gameObjects;
+		std::string m_name;
 	public:
 		Scene();
-		Scene(void (*changeSceneCallback)(int));
-		virtual void OnIterate();
-		virtual void OnDraw();
-		virtual void OnEvent();
+		Scene(const std::string& name, void (*changeSceneCallback)(int) = nullptr);
+		void OnIterate();
+		void OnDraw();
+		void OnEvent();
 };
 
 #endif
