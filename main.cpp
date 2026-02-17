@@ -3,16 +3,12 @@
 #include <SDL3/SDL_main.h>
 #include <iostream>
 #include <vector>
-#include "intro_scene.h"
-#include "game_scene.h"
-#include "options_scene.h"
-#include "menu_scene.h"
 #include "config.h"
 
 static SDL_Renderer* renderer = nullptr;
 static SDL_Window* window = nullptr;
-static std::shared_ptr<Scene>* scenes[10];
-static std::weak_ptr<Scene>* currScene;
+static std::shared_ptr<Scene> scenes[10];
+static std::weak_ptr<Scene> currScene;
 
 SDL_AppResult SDL_AppInit(void **appstate, int argc, char** argv)
 {
@@ -34,10 +30,12 @@ SDL_AppResult SDL_AppInit(void **appstate, int argc, char** argv)
 
 	SDL_SetRenderLogicalPresentation(renderer, 1280, 720, SDL_LOGICAL_PRESENTATION_LETTERBOX);
 
-	scenes[0] = new Scene("IntroScene");
-	scenes[1] = new Scene("MenuScene");
-	scenes[2] = new Scene("GameScene");
-	scenes[3] = new Scene("OptionsScene");
+	scenes[0] = std::make_shared<Scene>("IntroScene");
+	scenes[1] = std::make_shared<Scene>("MenuScene");
+	scenes[2] = std::make_shared<Scene>("GameScene");
+	scenes[3] = std::make_shared<Scene>("OptionsScene");
+
+	currScene = scenes[0];
 
 	return SDL_APP_CONTINUE;
 }

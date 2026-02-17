@@ -4,5 +4,6 @@
 #include <vector>
 #include <memory>
 #include <iostream>
+#include <SDL3/SDL.h>
 
 #endif

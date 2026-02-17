@@ -1,8 +1,8 @@
 #ifndef SCENE_H_
 #define SCENE_H_
 
-#include "engine/dg_engine_std.h"
-#include "engine/g_object.h"
+#include "dg_engine_std.h"
+#include "g_object.h"
 
 class Scene
 {
