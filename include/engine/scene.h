@@ -11,7 +11,7 @@ class Scene
 		std::string m_name;
 		void (*m_changeSceneCallback)(int);
 	public:
-		Scene(const std::string& name = "unnamed", void (*changeSceneCallback)(int) = nullptr);
+		Scene(const std::string& name = "Scene", void (*changeSceneCallback)(int) = nullptr);
 		void OnIterate();
 		void OnDraw();
 		void OnEvent(SDL_Event* event);

@@ -1,6 +1,6 @@
 #include "engine/scene.h"
 
-Scene::Scene(const std::string& name, void (*changeSceneCallback)(int) = nullptr)
+Scene::Scene(const std::string& name, void (*changeSceneCallback)(int))
 {
 	this->m_name = name;
 	this->m_changeSceneCallback = changeSceneCallback;
