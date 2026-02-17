@@ -3,5 +3,5 @@
 
 IntroScene::IntroScene()
 {
-	this->gameObjects.push_back(GameObject());
+
 }

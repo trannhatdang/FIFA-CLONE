@@ -9,6 +9,8 @@ class Scene
 	protected:
 		std::vector<GameObject*> _gameObjects;
 	public:
+		Scene();
+		Scene(void (*changeSceneCallback)(int));
 		virtual void OnIterate();
 		virtual void OnDraw();
 		virtual void OnEvent();

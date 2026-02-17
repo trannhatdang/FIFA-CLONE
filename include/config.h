@@ -1,7 +1,7 @@
 #ifndef CONFIG_H_
 #define CONFIG_H_
 
-int GetWindowWidth();
-int GetWindowHeight();
+const int GetWindowWidth();
+const int GetWindowHeight();
 
 #endif
