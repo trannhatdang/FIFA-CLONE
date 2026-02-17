@@ -1,6 +1,8 @@
 #ifndef COMPONENT_H_
 #define COMPONENT_H_
 
+#include "engine/dg_engine_stdc++.h"
+
 class Component
 {
 	public:

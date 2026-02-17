@@ -1,5 +1,5 @@
 #include "intro_scene.h"
-#include "g_object.h"
+#include "engine/g_object.h"
 
 IntroScene::IntroScene()
 {
