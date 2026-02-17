@@ -10,6 +10,9 @@ static SDL_Renderer* renderer = nullptr;
 static SDL_Window* window = nullptr;
 static std::vector<std::unique_ptr<Scene>> scenes;
 
+
+
+
 SDL_AppResult SDL_AppInit(void **appstate, int argc, char** argv)
 {
 	char windowCaption[5] = "game";
