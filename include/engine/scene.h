@@ -13,7 +13,7 @@ class Scene
 		Scene(const std::string& name = "Scene", void (*changeSceneCallback)(int) = nullptr);
 		void OnIterate();
 		void OnDraw();
-		void OnEvent(SDL_Event* event);
+		void OnEvent(SDL_Event*& event);
 		void AddGameObject();
 		std::shared_ptr<GameObject>& GetGameObject(int index = 0);
 };
