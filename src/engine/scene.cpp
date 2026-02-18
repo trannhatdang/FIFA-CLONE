@@ -29,3 +29,8 @@ void Scene::OnEvent(SDL_Event* event)
 		gb->OnEvent(event);
 	}
 }
+
+void Scene::AddGameObject()
+{
+	this->m_gameObjects.push_back(std::make_unique<GameObject>());
+}

@@ -6,6 +6,7 @@
 #include <memory>
 #include "engine/scene.h"
 #include "config.h"
+#include "custom_scene.h"
 
 static SDL_Renderer* renderer = nullptr;
 static SDL_Window* window = nullptr;
@@ -37,7 +38,9 @@ SDL_AppResult SDL_AppInit(void **appstate, int argc, char** argv)
 	scenes[2] = std::make_shared<Scene>("GameScene");
 	scenes[3] = std::make_shared<Scene>("OptionsScene");
 
-	currScene = scenes[0];
+	GenerateGameScene(scenes[2]);
+
+	currScene = scenes[2]; //Straight into game scene
 
 	return SDL_APP_CONTINUE;
 }
