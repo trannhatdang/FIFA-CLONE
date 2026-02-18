@@ -38,7 +38,7 @@ void Scene::AddGameObject()
 	this->m_gameObjects.push_back(std::make_unique<GameObject>());
 }
 
-std::unique_ptr<GameObject>& Scene::GetGameObject(int index)
+std::shared_ptr<GameObject>& Scene::GetGameObject(int index)
 {
 	return this->m_gameObjects[index];
 }

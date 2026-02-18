@@ -6,9 +6,10 @@
 class GameObject
 {
 	private:
-		std::vector<std::unique_ptr<Component>> _commponents;
+		std::vector<std::unique_ptr<Component>> m_commponents;
+		std::string m_name;
 	public:
-		GameObject();
+		GameObject(std::string name = "GameObject");
 		void OnIterate();
 		void OnDraw();
 		void OnEvent(SDL_Event* event);

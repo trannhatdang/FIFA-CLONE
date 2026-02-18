@@ -3,6 +3,6 @@
 
 #include "engine/scene.h"
 
-void GenerateGameScene(std::shared_ptr<Scene> gameScene);
+void GenerateGameScene(const std::shared_ptr<Scene>& gameScene);
 
 #endif
