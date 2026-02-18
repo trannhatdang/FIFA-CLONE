@@ -11,7 +11,7 @@
 static SDL_Renderer* renderer = nullptr;
 static SDL_Window* window = nullptr;
 static std::shared_ptr<Scene> scenes[10];
-static std::weak_ptr<Scene> currScene;
+static std::shared_ptr<Scene> currScene;
 
 SDL_AppResult SDL_AppInit(void **appstate, int argc, char** argv)
 {

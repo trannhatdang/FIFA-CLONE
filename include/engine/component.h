@@ -9,7 +9,7 @@ class Component
 		virtual void Start() = 0;
 		virtual void OnIterate() = 0;
 		virtual void OnDraw() = 0;
-		virtual void OnEvent(SDL_Event*& event) = 0;
+		virtual void OnEvent(SDL_Event* event) = 0;
 };
 
 #endif

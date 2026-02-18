@@ -12,7 +12,7 @@ class GameObject
 		GameObject(std::string name = "GameObject");
 		void OnIterate();
 		void OnDraw();
-		void OnEvent(const SDL_Event*& event);
+		void OnEvent(SDL_Event* event);
 };
 
 #endif

@@ -6,6 +6,11 @@ Scene::Scene(const std::string& name, void (*changeSceneCallback)(int))
 	this->m_changeSceneCallback = changeSceneCallback;
 }
 
+Scene::~Scene()
+{
+
+}
+
 void Scene::OnIterate()
 {
 	int size = m_gameObjects.size();
@@ -24,7 +29,7 @@ void Scene::OnDraw()
 	}
 }
 
-void Scene::OnEvent(SDL_Event*& event)
+void Scene::OnEvent(SDL_Event* event)
 {
 	int size = m_gameObjects.size();
 	for(int i = 0; i < size; ++i)
