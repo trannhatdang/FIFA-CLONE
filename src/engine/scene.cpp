@@ -8,29 +8,37 @@ Scene::Scene(const std::string& name, void (*changeSceneCallback)(int))
 
 void Scene::OnIterate()
 {
-	for(auto gb : this->m_gameObjects)
+	int size = m_gameObjects.size();
+	for(int i = 0; i < size; ++i)
 	{
-		gb->OnIterate();
+		m_gameObjects[i]->OnIterate();
 	}
 }
 
 void Scene::OnDraw()
 {
-	for(auto gb : this->m_gameObjects)
+	int size = m_gameObjects.size();
+	for(int i = 0; i < size; ++i)
 	{
-		gb->OnDraw();
+		m_gameObjects[i]->OnDraw();
 	}
 }
 
 void Scene::OnEvent(SDL_Event* event)
 {
-	for(auto gb : this->m_gameObjects)
+	int size = m_gameObjects.size();
+	for(int i = 0; i < size; ++i)
 	{
-		gb->OnEvent(event);
+		m_gameObjects[i]->OnEvent(event);
 	}
 }
 
 void Scene::AddGameObject()
 {
 	this->m_gameObjects.push_back(std::make_unique<GameObject>());
+}
+
+std::unique_ptr<GameObject>& Scene::GetGameObject(int index)
+{
+	return this->m_gameObjects[index];
 }

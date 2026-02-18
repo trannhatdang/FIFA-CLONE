@@ -2,6 +2,6 @@
 
 void GenerateGameScene(std::shared_ptr<Scene> gameScene)
 {
-	gameScene->AddGameObject(nullptr);
-
+	gameScene->AddGameObject();
+	auto gb = gameScene->GetGameObject();
 }

@@ -15,6 +15,7 @@ class Scene
 		void OnDraw();
 		void OnEvent(SDL_Event* event);
 		void AddGameObject();
+		std::unique_ptr<GameObject>& GetGameObject(int index = 0);
 };
 
 #endif
