@@ -1,4 +1,4 @@
 CompileFlags:
   Add:
-    - -Iinclude
+    - -ID:\\DH\\HK252\\FIFA CLONE\\include
     - -lSDL3
