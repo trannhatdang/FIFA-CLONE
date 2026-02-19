@@ -10,6 +10,7 @@ class GameObject
 		std::string m_name;
 	public:
 		GameObject(std::string name = "GameObject");
+		void OnStart();
 		void OnIterate();
 		void OnDraw();
 		void OnEvent(SDL_Event* event);

@@ -5,6 +5,14 @@ GameObject::GameObject(std::string name)
 	this->m_name = name;
 }
 
+void GameObject::OnStart()
+{
+	for(auto it: m_components)
+	{
+		it->OnStart();
+	}
+}
+
 void GameObject::OnIterate()
 {
 	for(std::shared_ptr<Component> it : m_components)

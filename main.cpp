@@ -13,6 +13,11 @@ static SDL_Window* window = nullptr;
 static std::shared_ptr<Scene> scenes[10];
 static std::shared_ptr<Scene> currScene;
 
+static void ChangeScene(int index)
+{
+	currScene = scenes[index];
+}
+
 SDL_AppResult SDL_AppInit(void **appstate, int argc, char** argv)
 {
 	char windowCaption[5] = "game";
@@ -40,7 +45,7 @@ SDL_AppResult SDL_AppInit(void **appstate, int argc, char** argv)
 
 	GenerateGameScene(scenes[2]);
 
-	currScene = scenes[2]; //Straight into game scene
+	ChangeScene(2); //Straight into game scene
 
 	return SDL_APP_CONTINUE;
 }

@@ -11,6 +11,14 @@ Scene::~Scene()
 
 }
 
+void Scene::OnStart()
+{
+	for(auto it: m_gameObjects)
+	{
+		it->OnStart();
+	}
+}
+
 void Scene::OnIterate()
 {
 	int size = m_gameObjects.size();

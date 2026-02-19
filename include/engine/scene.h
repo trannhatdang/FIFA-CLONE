@@ -12,6 +12,7 @@ class Scene
 	public:
 		Scene(const std::string& name = "Scene", void (*changeSceneCallback)(int) = nullptr);
 		~Scene();
+		void OnStart();
 		void OnIterate();
 		void OnDraw();
 		void OnEvent(SDL_Event* event);
