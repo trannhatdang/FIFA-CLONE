@@ -1,4 +1,4 @@
-#include "config.h"
+#include "Config.h"
 
 const int WINDOW_WIDTH = 1200;
 const int WINDOW_HEIGHT = 800;

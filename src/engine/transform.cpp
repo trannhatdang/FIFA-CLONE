@@ -1,4 +1,4 @@
-#include "engine/transform.h"
+#include "engine/Transform.h"
 
 Transform::Transform(const Vector3& pos, const Vector3& rot) : Component("Transform"), m_pos(pos), m_rot(rot)
 {

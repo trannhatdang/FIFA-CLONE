@@ -1,4 +1,4 @@
-#include "engine/dg_texture.h"
+#include "engine/DG_Texture.h"
 
 DG_Texture::DG_Texture(SDL_Texture* texture) : m_texture(texture)
 {

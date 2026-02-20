@@ -1,7 +1,7 @@
 #ifndef SCENE_H_
 #define SCENE_H_
 
-#include "g_object.h"
+#include "GameObject.h"
 
 class Scene
 {

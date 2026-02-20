@@ -1,4 +1,4 @@
-#include "engine/component.h"
+#include "engine/Component.h"
 
 Component::Component(const std::string& name) : m_name(name)
 {

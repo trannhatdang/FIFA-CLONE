@@ -1,4 +1,4 @@
-#include "engine/scene.h"
+#include "engine/Scene.h"
 
 Scene::Scene(const std::string& name, void (*changeSceneCallback)(int))
 {

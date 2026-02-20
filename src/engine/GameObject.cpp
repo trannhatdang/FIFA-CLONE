@@ -1,5 +1,5 @@
-#include "engine/g_object.h"
-#include "engine/transform.h"
+#include "engine/GameObject.h"
+#include "engine/Transform.h"
 
 GameObject::GameObject(std::string name)
 {
