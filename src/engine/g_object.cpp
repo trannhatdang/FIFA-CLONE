@@ -47,20 +47,26 @@ void GameObject::OnEvent(SDL_Event* event)
 	}
 }
 
-std::shared_ptr<Component> GameObject::GetComponent(int index) const
+const std::shared_ptr<Component>& GameObject::GetComponent(int index) const
 {
 	return m_components[index];
 }
 
-std::shared_ptr<Component> GameObject::GetComponent(const std::string& name) const
+const std::shared_ptr<Component>& GameObject::GetComponent(const std::string& name) const
 {
-	for(auto it: this->m_components)
+	int size = m_components.size();
+	for(int i = 0; i < size; ++i)
 	{
-		if(it->GetName() == name)
+		if(m_components[i]->GetName() == name)
 		{
-			return it;
+			return m_components[i];
 		}
 	}
+
+	return nullptr;
 }
 
-void AddComponent(std::shared_ptr<Component> component);
+void GameObject::AddComponent(std::shared_ptr<Component> component)
+{
+	m_components.push_back(component);
+}

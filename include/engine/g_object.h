@@ -15,8 +15,8 @@ class GameObject
 		void OnIterate();
 		void OnDraw();
 		void OnEvent(SDL_Event* event);
-		std::shared_ptr<Component> GetComponent(int index) const;
-		std::shared_ptr<Component> GetComponent(const std::string& name) const;
+		const std::shared_ptr<Component>& GetComponent(int index) const;
+		const std::shared_ptr<Component>& GetComponent(const std::string& name) const;
 		void AddComponent(std::shared_ptr<Component> component);
 };
 

@@ -1,6 +1,6 @@
 #include "engine/transform.h"
 
-Transform::Transform(const std::vector<int>& pos, const std::vector<int>& rot) : Component("Transform"), m_pos(pos), m_rot(rot)
+Transform::Transform(const Vector3& pos, const Vector3& rot) : Component("Transform"), m_pos(pos), m_rot(rot)
 {
 
 }
@@ -25,12 +25,12 @@ void Transform::OnEvent(SDL_Event* event)
 
 }
 
-std::vector<int> Transform::GetPosition()
+const Vector3& Transform::GetPosition() const
 {
 	return m_pos;
 }
 
-void Transform::SetPosition(const std::vector<int>& pos)
+void Transform::SetPosition(const Vector3& pos)
 {
 	m_pos = pos;
 }

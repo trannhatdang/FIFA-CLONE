@@ -7,16 +7,16 @@
 class Transform : public Component
 {
 	private:
-		std::vector<int> m_pos;
-		std::vector<int> m_rot;
+		Vector3 m_pos;
+		Vector3 m_rot;
 	public:
-		Transform(const std::vector<int>& pos = {0, 0, 0}, const std::vector<int>& rot = {0, 0, 0});
+		Transform(const Vector3& pos = {0, 0, 0}, const Vector3& rot = {0, 0, 0});
 		void OnStart();
 		void OnIterate();
 		void OnDraw();
 		void OnEvent(SDL_Event* event);
-		std::vector<int> GetPosition();
-		void SetPosition(const std::vector<int>& pos);
+		const Vector3& GetPosition() const;
+		void SetPosition(const Vector3& pos);
 };
 
 #endif
