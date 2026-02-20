@@ -22,6 +22,6 @@ std::shared_ptr<DG_Texture> CreateTextureFromPNG(SDL_Renderer* renderer, const s
 
 	std::shared_ptr<DG_Texture> texture(new DG_Texture(SDL_CreateTextureFromSurface(renderer, surface)));
 	SDL_DestroySurface(surface);
-	return texture;*/
-	return nullptr;
+	return texture;
+	*/return NULL;
 }
