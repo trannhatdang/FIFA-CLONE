@@ -76,7 +76,7 @@ const std::shared_ptr<Component>& GameObject::GetComponent(const std::string& na
 		}
 	}
 
-	return nullptr;
+	return NULL;
 }
 
 void GameObject::AddComponent(std::shared_ptr<Component> component)

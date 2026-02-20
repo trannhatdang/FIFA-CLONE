@@ -24,18 +24,15 @@ static void ChangeScene(int index)
 SDL_AppResult SDL_AppInit(void **appstate, int argc, char** argv)
 {
 	char windowCaption[5] = "game";
-	window = SDL_CreateWindow(windowCaption, GetWindowWidth(), GetWindowHeight(), SDL_WINDOW_RESIZABLE);
 
-	if(window == NULL){
-		fprintf(stderr, "SDL_CreateWindow failed:%s", SDL_GetError());
+	if (!SDL_Init(SDL_INIT_VIDEO)) {
+		SDL_Log("Couldn't initialize SDL: %s", SDL_GetError());
 		return SDL_APP_FAILURE;
 	}
-
-	renderer = SDL_CreateRenderer(window, NULL);
-
-	if(renderer == NULL)
+	
+	if(!SDL_CreateWindowAndRenderer(windowCaption, GetWindowWidth(), GetWindowHeight(), SDL_WINDOW_RESIZABLE, &window, &renderer))
 	{
-		fprintf(stderr, "SDL_CreateRenderer failed:%s", SDL_GetError());
+		SDL_Log("Couldn't create window and renderer: %s", SDL_GetError());
 		return SDL_APP_FAILURE;
 	}
 

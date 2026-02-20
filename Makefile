@@ -1,5 +1,5 @@
 MAIN:= main.cpp
-SRC:= $(wildcard src/*.cpp src/engine/*.cpp)
+SRC:= $(wildcard src/*.cpp src/engine/*.cpp src/engine/Components/*.cpp)
 CXX:= g++
 CFLAGS:= -lSDL3 -Iinclude
 OUTPUT:= main.exe

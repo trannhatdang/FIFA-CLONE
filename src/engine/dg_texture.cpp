@@ -12,7 +12,8 @@ DG_Texture::~DG_Texture()
 
 std::shared_ptr<DG_Texture> CreateTextureFromPNG(SDL_Renderer* renderer, const std::string& filepath)
 {
-	/*SDL_Surface* surface = SDL_LoadPNG(filepath.c_str());
+	/*
+	SDL_Surface* surface = SDL_LoadPNG(filepath.c_str());
 	if(!surface)
 	{
 		SDL_Log("Could not create surface for texture creation.");
@@ -22,5 +23,5 @@ std::shared_ptr<DG_Texture> CreateTextureFromPNG(SDL_Renderer* renderer, const s
 	std::shared_ptr<DG_Texture> texture(new DG_Texture(SDL_CreateTextureFromSurface(renderer, surface)));
 	SDL_DestroySurface(surface);
 	return texture;*/
-	return NULL;
+	return nullptr;
 }
