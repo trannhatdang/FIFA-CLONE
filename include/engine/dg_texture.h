@@ -10,7 +10,7 @@ class DG_Texture
 	private:
 		SDL_Texture* m_texture;
 	public:
-		DG_Texture(SDL_Texture* texture = nullptr);
+		DG_Texture(SDL_Texture* texture = NULL);
 		~DG_Texture();
 };
 std::shared_ptr<SDL_Texture> CreateTextureFromPNG(const std::string& filepath);

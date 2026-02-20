@@ -1,0 +1,8 @@
+{
+	"InstallScripts" : 
+	[
+		"D:/Programs/SDL3-3.4.0/build/cmake_install.cmake",
+		"D:/Programs/SDL3-3.4.0/build/test/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

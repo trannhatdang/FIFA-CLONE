@@ -4,7 +4,7 @@
 GameObject::GameObject(std::string name)
 {
 	this->m_name = name;
-	this->AddComponent(std::make_shared<Transform>());
+	this->AddComponent(std::make_shared<Transform>(std::shared_ptr<GameObject>(this)));
 }
 
 GameObject::GameObject(const GameObject& gameObject)

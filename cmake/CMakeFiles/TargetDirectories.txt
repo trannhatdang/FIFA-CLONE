@@ -1,8 +1,0 @@
-D:/DH/HK252/FIFA CLONE/cmake/CMakeFiles/my_app.dir
-D:/DH/HK252/FIFA CLONE/cmake/CMakeFiles/edit_cache.dir
-D:/DH/HK252/FIFA CLONE/cmake/CMakeFiles/rebuild_cache.dir
-D:/DH/HK252/FIFA CLONE/cmake/_deps/sdl-build/CMakeFiles/SDL3-shared.dir
-D:/DH/HK252/FIFA CLONE/cmake/_deps/sdl-build/CMakeFiles/SDL3_test.dir
-D:/DH/HK252/FIFA CLONE/cmake/_deps/sdl-build/CMakeFiles/SDL_uclibc.dir
-D:/DH/HK252/FIFA CLONE/cmake/_deps/sdl-build/CMakeFiles/edit_cache.dir
-D:/DH/HK252/FIFA CLONE/cmake/_deps/sdl-build/CMakeFiles/rebuild_cache.dir

@@ -1,8 +1,0 @@
-{
-	"InstallScripts" : 
-	[
-		"D:/DH/HK252/FIFA CLONE/cmake/cmake_install.cmake",
-		"D:/DH/HK252/FIFA CLONE/cmake/_deps/sdl-build/cmake_install.cmake"
-	],
-	"Parallel" : false
-}

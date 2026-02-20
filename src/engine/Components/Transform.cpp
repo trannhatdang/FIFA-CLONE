@@ -1,6 +1,6 @@
 #include "engine/Components/Transform.h"
 
-Transform::Transform(const Vector3& pos, const Vector3& rot) : Component("Transform"), m_pos(pos), m_rot(rot)
+Transform::Transform(const std::shared_ptr<GameObject>& gameObject, const Vector3& pos, const Vector3& rot) : Component("Transform", gameObject), m_pos(pos), m_rot(rot)
 {
 
 }
@@ -15,7 +15,7 @@ void Transform::OnIterate()
 
 }
 
-void Transform::OnDraw()
+void Transform::OnDraw(SDL_Renderer* renderer)
 {
 
 }
