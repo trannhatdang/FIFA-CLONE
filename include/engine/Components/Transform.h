@@ -2,7 +2,7 @@
 #define TRANSFORM_H_
 
 #include "engine/dg_engine_std.h"
-#include "engine/component.h"
+#include "engine/components/component.h"
 
 class Transform : public Component
 {

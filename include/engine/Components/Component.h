@@ -1,7 +1,7 @@
 #ifndef COMPONENT_H_
 #define COMPONENT_H_
 
-#include "dg_engine_std.h"
+#include "engine/dg_engine_std.h"
 class GameObject;
 
 class Component

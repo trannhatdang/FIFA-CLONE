@@ -1,7 +1,7 @@
 #ifndef G_OBJECT_
 #define G_OBJECT_
 
-#include "Component.h"
+#include "Components/Component.h"
 
 class GameObject
 {

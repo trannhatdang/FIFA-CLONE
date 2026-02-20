@@ -1,7 +1,7 @@
 #ifndef B_COLLIDER_H_
 #define B_COLLIDER_H_
 
-#include "engine/Component.h"
+#include "engine/Components/Component.h"
 
 //Only 2D and only box, normally this should inherit another collider component but this should do
 

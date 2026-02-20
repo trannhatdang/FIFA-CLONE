@@ -1,4 +1,4 @@
-#include "engine/BoxCollider.h"
+#include "engine/Components/BoxCollider.h"
 
 BoxCollider::BoxCollider(const BColliderOff offset) : Component("BoxCollider"), m_offset(offset) {}
 
