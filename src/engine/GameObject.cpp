@@ -23,6 +23,14 @@ void GameObject::OnStart()
 	}
 }
 
+void GameObject::OnFixedIterate()
+{
+	for(std::shared_ptr<Component> it : m_components)
+	{
+		it->OnFixedIterate();
+	}
+}
+
 void GameObject::OnIterate()
 {
 	for(std::shared_ptr<Component> it : m_components)
@@ -31,11 +39,11 @@ void GameObject::OnIterate()
 	}
 }
 
-void GameObject::OnDraw()
+void GameObject::OnDraw(SDL_Renderer* renderer)
 {
 	for(std::shared_ptr<Component> it : m_components)
 	{
-		it->OnDraw();
+		it->OnDraw(renderer);
 	}
 }
 

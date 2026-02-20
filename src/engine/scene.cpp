@@ -19,6 +19,15 @@ void Scene::OnStart()
 	}
 }
 
+void Scene::OnFixedIterate()
+{
+	int size = m_gameObjects.size();
+	for(int i = 0; i < size; ++i)
+	{
+		m_gameObjects[i]->OnFixedIterate();
+	}
+}
+
 void Scene::OnIterate()
 {
 	int size = m_gameObjects.size();
@@ -28,12 +37,12 @@ void Scene::OnIterate()
 	}
 }
 
-void Scene::OnDraw()
+void Scene::OnDraw(SDL_Renderer* renderer)
 {
 	int size = m_gameObjects.size();
 	for(int i = 0; i < size; ++i)
 	{
-		m_gameObjects[i]->OnDraw();
+		m_gameObjects[i]->OnDraw(renderer);
 	}
 }
 

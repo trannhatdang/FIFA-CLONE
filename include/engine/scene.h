@@ -14,7 +14,8 @@ class Scene
 		~Scene();
 		void OnStart();
 		void OnIterate();
-		void OnDraw();
+		void OnFixedIterate();
+		void OnDraw(SDL_Renderer* renderer);
 		void OnEvent(SDL_Event* event);
 		void AddGameObject();
 		std::shared_ptr<GameObject>& GetGameObject(int index = 0);

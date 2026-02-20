@@ -3,6 +3,7 @@
 #include <SDL3/SDL_main.h>
 #include <iostream>
 #include <vector>
+#include <chrono>
 #include <memory>
 #include "engine/scene.h"
 #include "config.h"
@@ -12,6 +13,8 @@ static SDL_Renderer* renderer = nullptr;
 static SDL_Window* window = nullptr;
 static std::shared_ptr<Scene> scenes[10];
 static std::shared_ptr<Scene> currScene;
+static std::chrono::milliseconds frametime;
+static std::chrono::time_point last_iterate_point = std::chrono::system_clock::now();
 
 static void ChangeScene(int index)
 {
@@ -52,8 +55,14 @@ SDL_AppResult SDL_AppInit(void **appstate, int argc, char** argv)
 
 SDL_AppResult SDL_AppIterate(void *appstate)
 {
+	if(std::chrono::system_clock::now() - last_iterate_point > frametime)
+	{
+		currScene->OnFixedIterate();
+		last_iterate_point = std::chrono::system_clock::now();
+	}
 	currScene->OnIterate();
-	currScene->OnDraw();
+	currScene->OnDraw(renderer);
+
 	return SDL_APP_CONTINUE;
 }
 

@@ -13,7 +13,8 @@ class GameObject
 		GameObject(const GameObject& gameObject);
 		void OnStart();
 		void OnIterate();
-		void OnDraw();
+		void OnFixedIterate();
+		void OnDraw(SDL_Renderer* renderer);
 		void OnEvent(SDL_Event* event);
 		void OnCollisionEnter(GameObject obj);
 		const std::shared_ptr<Component>& GetComponent(int index) const;
