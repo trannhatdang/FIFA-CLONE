@@ -53,7 +53,7 @@ SDL_AppResult SDL_AppInit(void **appstate, int argc, char** argv)
 SDL_AppResult SDL_AppIterate(void *appstate)
 {
 	currScene->OnIterate();
-	currScene->OnDraw(renderer);
+	currScene->OnDraw();
 	return SDL_APP_CONTINUE;
 }
 

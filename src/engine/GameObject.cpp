@@ -47,6 +47,11 @@ void GameObject::OnEvent(SDL_Event* event)
 	}
 }
 
+void GameObject::OnCollisionEnter(GameObject obj)
+{
+
+}
+
 const std::shared_ptr<Component>& GameObject::GetComponent(int index) const
 {
 	return m_components[index];

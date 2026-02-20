@@ -4,6 +4,7 @@
 #include "engine/Component.h"
 
 //Only 2D and only box, normally this should inherit another collider component but this should do
+
 typedef struct BColliderOff
 {
 	int t_off;

@@ -19,4 +19,6 @@ typedef struct Vector3
 	int z;
 } Vector3;
 
+const int ON_COLLISION_ENTER_EVENT = SDL_RegisterEvents(1);
+
 #endif
